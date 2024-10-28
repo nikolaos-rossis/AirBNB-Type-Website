@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Αρχική Σελίδα </title>
+        <link href="./style/style.css" rel="stylesheet">
+        <script src="form.js" type="text/javascript"></script>
+
+
+
+    </head>
+    <body>
+        <header>
+            <div id="upper-header">
+
+                <div class="center-align"><img src="images\image_back.jpg" alt="gkri_background" class="images"></div>
+                <div class="center-align"> <h1> Ασημένιος Οδηγός </h1> </div>
+                
+                
+
+            </div>
+            <div id="lower-header" class="center-align">
+                <h2> Μενού Πλοήγησης </h2>
+                <nav>
+                    <ul class="menu-bar">
+                        <li><a href="categories.html"> Categories </a></li>
+                        <li><a href="about_us.html"> About Us </a></li>
+                        <li><a href="contact.html"> Contact Us </a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+        <main>
+            <form method="POST" id="epicform">
+                <fieldset>
+                    <legend> Στοιχεία Επικοινωνίας</legend>
+                    <p class="griding">
+                        <label for="txt_name"> Ονοματεπώνυμο* : </label>
+                        <input type="text" id="txt_name" name="name"
+                        placeholder="πχ. Νικόλαος Ρώσσης" required>
+                    </p>
+                    <p class="griding">
+                        <label for="txt_age"> Ηλικία* : </label>
+                        <input type="text" id="txt_age" name="age"
+                        placeholder="πχ. 32" required>
+                        <p id="message3"></p>
+                    </p>
+                    <p class="griding">
+                        <label for="txt_email"> Email* : </label>
+                        <input type="text" id="txt_email" name="email"
+                        placeholder="πχ. nickrossis9017@gmail.com" required>
+                        <p id="message2"></p>
+                    </p>
+                    <p class="griding">
+                        <label for="txt_address"> Διεύθυνση Κατοικίας* : </label>
+                        <input type="text" id="txt_address" name="address"
+                        placeholder="πχ. Ολύμπου 67 Υμηττός" required>
+                    </p>
+                    <p class="griding">
+                        <label for="txt_birthdate"> Ημερομηνία Γέννησης* : </label>
+                        <input type="date" id="txt_birthdate" name="birthdate" required>
+                    </p>
+                    <p class="griding">
+
+                        <label for="txt_telephone"> Τηλέφωνο* : </label>
+                        <input type="text" id="txt_telephone" name="telephone"
+                        placeholder="πχ. 6912312312"
+                        pattern="[6]{1}[9]{1}[0-9]{8}" required
+                        title="Επιλέξτε Ελληνικο αριθμό (69) και μετά 8 ψηφία">
+                    </p>
+                    <p class="griding">
+                        <label for="txt_problem"> Περιγραφή του Προβλήματος: </label>
+                        <textarea type="text" id="txt_problem" name="problem" rows="10" cols="50"> </textarea>
+                    </p>
+
+                </fieldset>
+
+                <br>
+                
+                <fieldset>
+                    <legend> Επικύρωση Στοιχείων Χρήστη </legend>
+                    <p class="griding">
+                        <label for="txt_username"> Username* : </label>
+                        <input type="text" id="txt_username" name="username"
+                        placeholder="πχ. NickRo" required>
+                    </p>
+                    <p class="griding">
+                        <label for="txt_pass"> Password* : </label>
+                        <input type="text" id="txt_pass" name="password"
+                        placeholder="πχ. 71fjid8v" required>
+                    </p>
+                    <p class="griding">
+                        <label for="txt_passconfirm"> Confirm Password* : </label>
+                        <input type="text" id="txt_passwordConfirm" name="passwordConfirm" required>
+                    </p>
+                    <p id="message"> </p>
+                    <p class="griding">
+                        <label for="select_contactType"> Τρόπος Επικοινωνίας : </label>
+                        <select id="select_contactType" name="contactTypes">
+                            <option value="sms"> SMS </option>
+                            <option value="email"> Email </option>
+                            <option value="viber"> Viber </option>
+                            <option value="whatsapp"> WhatsApp </option>
+                        </select>
+                    </p>
+                        
+                </fieldset>
+
+                <fieldset>
+                    <legend> Αγοραστική Κίνηση </legend>
+
+                    <details>
+                        <summary> Τύπος Αγγελιών </summary>
+
+                    
+                        <input type="checkbox" id="txt_ad_cars" name="ad-cars">
+                        <label for="txt_ad_cars"> Πωλήσεις/Αγορές Αυτοκινήτων </label>
+                        <br>
+                        <input type="checkbox" id="txt_ad_jobs" name="ad-jobs">
+                        <label for="txt_ad_jobs"> Εύρεση Εργασίας </label>
+                        <br>
+                        <input type="checkbox" id="txt_ad_estates" name="ad-estates">
+                        <label for="txt_ad_estates"> Ακίνητα </label>
+                        <br>
+                        <input type="checkbox" id="txt_ad_online" name="ad-online">
+                        <label for="txt_ad_online"> Online Interviews </label>
+
+                    </details>
+
+                    <details>
+                        <summary> Εργασική Κατάσταση </summary>
+
+                        <input type="radio" id="txt_worker" name="job_status">
+                        <label for="txt_worker"> Εργαζόμενος </label>
+                        <br>                      
+                        <input type="radio" id="txt_student" name="job_status">
+                        <label for="txt_student"> Φοιτητής </label>
+                        <br>
+                        <input type="radio" id="txt_jobless" name="job_status">
+                        <label for="txt_jobless"> Άνεργος </label>
+
+                    </details>
+                </fieldset>
+
+                <fieldset>
+                    <legend> Γενικότερες Ερωτήσεις </legend>
+                <p class="griding">
+                    <label for="txt_favplace"> Επιθυμητός Τόπος Κατοικίας: </label>
+                    <input type="text" id="txt_otherplace" list="place-list">
+                    
+                </p>
+                <p class="griding">
+                    <label for="txt_parents"> Οικογενειακή Κατάσταση: </label>
+                    <input type="text" id="txt_parents" list="parent-list">
+                    
+                </p>
+                    <datalist id="place-list">
+                        <option value="Krhth"> Κρήτη </option>
+                        <option value="Kerkyra"> Κέρκυρα  </option>
+                        <option value="Preveza"> Πρέβεζα </option>
+                        <option value="Skopelos"> Σκόπελος </option>
+
+                        <option value="athens"> Αθήνα </option>
+                        <option value="salouga"> Θεσσαλονίκη </option>
+                        <option value="kalamata"> Καλαμάτα </option>
+                        <option value="giannena"> Γιάννενα </option>
+                        <option value="serres"> Σέρρες </option>
+                        <option value="patra"> Πάτρα </option>
+                        <option value="alexandroupolh"> Αλεξανδρούπολη </option>
+                    </datalist>
+
+                    <datalist id="parent-list">
+                        <option value="married"> Παντρεμένοι </option>
+                        <option value="divorced"> Χωρισμένοι  </option>
+                        <option value="deceased"> Αποθανώντες </option>
+                        <option value="hidden"> Προτιμώ να μην πω </option>
+
+                    </datalist>
+
+
+                    <details>
+                        <summary> Τύπος Οχήματος </summary>
+
+                        <input type="checkbox" id="txt_typecar" name="type-car">
+                        <label for="txt_typecar"> Αυτοκίνητο </label>
+                        <br>
+                        <input type="checkbox" id="txt_typemotorcycle" name="type-motorcycle">
+                        <label for="txt_typemotorcycle"> Μηχανή </label>
+                        <br>
+                        <input type="checkbox" id="txt_typetruck" name="type-truck">
+                        <label for="txt_typetruck"> Φορτηγό </label>
+                        <br>
+                    </details>
+                </fieldset>
+
+
+                <br>
+                <button type="submit"> Αποστολή Αιτήματος </button>
+                <button type="reset"> Επαναφορά </button>
+                <br>
+                <p> Τα στοιχεία με αστερίσκο (*) είναι υποχρεωτικά </p>
+            </form>
+                
+        </main>
+        <footer>
+            <h2> Στοιχεία Επικοινωνίας </h2>
+            <address>
+                <div>Email: <a href="contactemail@gmail.com" title="contactemail@gmail.com"> contactemail@gmail.com </a> </div>
+                <div>Instagram: <a href="contactemail@gmail.com" title="@SilverGuide"> @SilverGuide </a></div>
+                <div>Facebook: <a href="contactemail@gmail.com" title="Ashmenios Odhgos (SilverGuide)"> Ashmenios Odhgos (SilverGuide) </a></div>
+                <div>Υμηττού 69, Βριλήσσια </div>
+                <div>69xxxxxx81</div>
+            </address>
+        </footer>
+    </body>
+</html>

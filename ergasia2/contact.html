@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Contact Us </title>
+        <link href="./style/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div id="upper-header">
+
+                <h1> Ασημένιος Οδηγός </h1>
+                <img src="images\image_back.jpg" alt="gkri_background" class="images">
+
+            </div>
+            <div id="lower-header">
+                <h2> Μενού Πλοήγησης </h2>
+                <nav>
+                    <ul>
+                        <li><a href="categories.html"> Categories </a></li>
+                        <li><a href="about_us.html"> About Us </a></li>
+                        <li><a href="index.html"> Index </a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+        <main>
+            <h2> Επικοινωνήστε μαζί μας για οποιαδήποτε βοήθεια!!! </h2>
+            <form method="POST">
+                <fieldset>
+                    <legend> Στοιχεία Επικοινωνίας</legend>
+
+                    <label for="txt_name"> Ονοματεπώνυμο* : </label>
+                    <input type="text" id="txt_name" name="name"
+                    placeholder="πχ. Νικόλαος Ρώσσης" required>
+
+                    <label for="txt_email"> Email* : </label>
+                    <input type="text" id="txt_email" name="email"
+                    placeholder="πχ. nickrossis9017@gmail.com" required>
+
+                    <br>
+                    <br>
+                
+                    <label for="txt_telephone"> Τηλέφωνο* : </label>
+                    <input type="text" id="txt_telephone" name="telephone"
+                    placeholder="πχ. 6912312312"
+                    pattern="[6]{1}[9]{1}[0-9]{8}" required
+                    title="Επιλέξτε Ελληνικο αριθμό (69) και μετά 8 ψηφία">
+
+                    <label for="txt_code"> Κωδικός Αγγελίας* : </label>
+                    <input type="text" id="txt_code" name="code"
+                    autocomplete="code" list="code_list" required>
+
+                    <!-- Kapoioi deigmatikoi kwdikoi apo tis aggelies-->
+                    <datalist id="code_list">
+                        <option>12332151 </option>
+                        <option>ewtgsdfgse </option>
+                        <option>124sdh3 </option>
+                        <option>1AWEF4= </option>
+                    </datalist>
+
+                    <br>
+                    <br>
+                    <label for="txt_problem"> Περιγραφή του Προβλήματος: </label>
+                    <input type="text" id="txt_problem" name="problem">
+
+                </fieldset>
+                <br>
+                <button type="submit"> Αποστολή Αιτήματος </button>
+                <button type="reset"> Επαναφορά </button>
+                <p> Τα στοιχεία με αστερίσκο (*) είναι υποχρεωτικά </p>
+            </form>
+           
+        </main>
+        <footer>
+            <div id="whole-footer">
+                <h2> Στοιχεία Επικοινωνίας </h2>
+                <address>
+                    Email: <a href="contactemail@gmail.com" title="contactemail@gmail.com"> contactemail@gmail.com </a><br> 
+                    Instagram: <a href="contactemail@gmail.com" title="@SilverGuide"> @SilverGuide </a><br>
+                    Facebook: <a href="contactemail@gmail.com" title="Ashmenios Odhgos (SilverGuide)"> Ashmenios Odhgos (SilverGuide) </a><br>
+                    Υμηττού 69, Βριλήσσια <br>
+                    69xxxxxx81
+                </address>
+            </div>
+        </footer>
+    </body>
+</html>

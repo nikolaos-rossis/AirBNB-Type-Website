@@ -1,0 +1,604 @@
+
+
+
+:root {
+    --primary-color: rgb(0, 4, 123);
+    --prim-back-color:#b8babd;  /* Μεταβλητή για color του background */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* chartreuse χρώμα σε unvisited και blueviolet σε visited links*/
+a:link {
+    color:chartreuse
+}
+
+a:visited {
+    color:blueviolet
+}
+
+
+
+
+
+
+
+
+
+/* Μορφοποίηση του body (fonts και χρώμα από το root) */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--prim-back-color);
+}
+
+p {
+    font-size: 1.3em;
+}
+
+
+
+
+
+
+
+
+/* Μορφοποίηση του βασικού header και των article header*/
+body > header {
+    padding: 20px;
+    background-color:#d8dddf; 
+}
+
+
+
+article > header {
+    padding: 0px;
+    background-color: var(--prim-back-color);
+}
+
+#upper-header {
+    font-family: 'Garamond', serif;
+    color: var(--main-font-color);
+
+}
+
+#upper-header h1 {
+    padding: 20px;
+    margin-right: 30px;
+    float: right;
+    font-size: 5em;
+}
+
+
+
+
+/*Διαταξη grid της σελιδας*/
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(0,1fr));
+}
+
+/*Διαταξη footer σε grid*/
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+address {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+}
+
+
+
+
+
+/*Διαταξη header με grids και flexbox για το navigator*/
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.7fr 0.3fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+#upper-header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+
+#lower-header > nav > .menu-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.grid-center-align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Χρησιμοποιείται στο khfhsia προκειμένου να αναδύονται τα παράθυρα οταν κάνει χοβερ το ποντικι*/
+
+.estate-ad-4-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit ,minmax(0, 1fr));
+}
+
+.estate-ad-4-grid > .lecture-item > p, .estate-ad-4-grid > .lecture-item > div {
+    display: none;
+}
+
+.estate-ad-4-grid > .lecture-item:hover > p, .estate-ad-4-grid > .lecture-item:hover > div {
+    display: block;
+    transition-duration: 2s;
+}
+
+
+
+
+/*Διαταξη αλλων στοιχειων με grids και flexes*/
+#ad-explain {                                       /*index*/
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.all-ads {                  /*categories*/
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.ad-grid {                  /*categories-inside*/
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.estate-ads-all, .work-ads-all { /*στις ενοικιάσεις και στην παροχή εργασίας στην εστίαση*/
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+}
+
+#estate-ad > article, #work-ad > article, #estate-ad-4-details > article { /*Χωριζει καθε ad σε ενα δικο του grid*/
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 250px 500px;
+}
+
+.item-1 { /*ο τίτλος στο ad με τον κωδικό*/
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display:flex;
+    flex-direction: column;
+    
+}
+
+
+.item-1 > header {
+    padding:0px;
+    background-color: var(--prim-back-color);
+    display:block;
+}
+
+.item-1 > header, .item-1 > section {
+    
+    border-style:none none outset none;
+
+}
+
+.item-1 > section {
+    align-self: center;
+}
+
+/* Η εικόνα στο ad*/
+.item-2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* Τα χαρακτηριστικά του ad*/
+.item-3 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/*Στο khfhsia κάνει το τραπέζι και τα στατιστικά της σελίδας σε ένα grid*/
+
+.table-and-characteristics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+/* Διάταξη με flex στο εσωτερικό του grid*/
+#estate-ad-4-characteristics {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#estate-ad-4-pagestatistics {
+    display:flex;
+    flex-direction: column;
+    height: 705px;
+    align-self:flex-start;
+    justify-content:end;
+
+}
+
+
+
+.item-3 > section {
+    
+    
+    margin:10px;
+
+    background-color: antiquewhite;
+    border-left: #1772a0;
+    border-style: none none none solid;
+    border-width: 6px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+}
+
+.item-3 > section > p {
+    padding: 10px;
+    
+}
+
+
+/* Στο about us διαταξη με grid*/
+.our-team {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-member > header, .team-member > p {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Μορφοποίηση του footer*/
+footer {
+    background-color:#a3a3ac;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+/*Μορφοποίηση των h1-h6 με διαφορετικά fonts και χρώματα*/
+h1 {
+    color: var(--primary-color);
+    font-size: 20pt;
+}
+
+h2 {
+    color: var(--primary-color);
+    font-size: 20pt;
+}
+
+article > header > h1 {
+    color: var(--primary-color);
+    font-size: 16pt;
+}
+
+#category-ad h2 {
+    margin:1em;
+    padding:1em;
+    border-style: outset;
+}
+
+#category-ad {
+    text-align: center;
+    border-style: outset solid solid outset;
+    margin:5px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Μορφοποίηση του navigator*/
+
+nav ul {
+    float: none;
+    padding:10px;
+    margin:10px;
+}
+
+nav li {
+    list-style-type: none; /*βγαζει τα bullets*/
+    
+    background-color:#b8babd;
+    width: 10em;
+    height: 3em;
+    margin: 2px;
+}
+
+nav li > a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 15px;
+}
+
+
+
+nav a:hover , .like-nav:hover, .ad-list a:hover{
+    background-color: rgb(211, 211, 211);
+    transition: background-color 400ms ease-in;
+    
+}
+
+
+
+.ad-list {
+    float:center;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.ad-list li{
+    list-style-type: none; /*βγαζει τα bullets*/
+    background-color:#ffffff;
+    border-style: outset;
+    border-color: var(--prim-back-color);
+    width: 20em;
+
+}
+
+.ad-list li:hover {
+    border-color: rgb(0, 149, 255);
+    border-style: inset;
+}
+
+.ad-list > li > a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding:20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Μορφοποίηση των στοιχείων κάθε article σε κουτάκια*/
+
+.lecture-item {
+    padding: 20px;
+    border-style: outset solid solid outset;
+    overflow: auto;
+    margin:10px;
+}
+
+
+
+
+
+
+
+
+
+/*Σε περίπτωση που υπάρχει quote*/
+.quote {
+    font-style: italic;
+}
+
+/*για center-align αν το χρειαστεί*/
+
+.center-align {
+    text-align: center;
+}
+
+
+
+
+
+/* Λιγοστή μορφοποίηση σε τίτλους*/
+#brief-explain, #empty-info, #estate-ad-4-analysis {
+    text-align: center;
+    border-style: inset;
+    border-radius: 25px;
+    margin:30px;
+    padding:30px;
+}
+
+main {
+    clear: both;
+}
+
+/*Standard μεγεθος για εικόνες*/
+
+.images {
+    width: 500px;
+    height: 300px;
+}
+
+.like-nav {
+    float: none;
+    padding:1em;
+    margin:3px;
+    
+}
+
+
+
+/*Φτιάχνει τις εικόνες*/
+
+.all-ads img {
+    float:left;
+    padding: 1em 1em 5em 6em;
+    margin: 70px 1px 1px 1px;
+}
+
+
+
+
+
+
+
+/*Μορφοποίηση Πίνακα*/
+
+table, td, th { 
+    border: 10px outset #000000;
+}
+  
+table {
+    border-collapse: collapse; /* ενώνει τα κουτιά ανάλογα με τον διαχωρισμό τους*/
+    text-align: center;
+}
+  
+th, td {
+    padding: 15px;
+}
+
+
+
+/*Μορφοποίηση της φορμας*/
+
+
+fieldset {
+    width:auto;
+    border-radius: 25px;
+    border-color:aqua;
+    margin: 10px;
+}
+
+
+fieldset legend {
+    color:rgb(73, 21, 21);
+    font-size:25px;
+    font-weight: bold;
+}
+
+fieldset details {
+    margin-top:20px;
+    margin-bottom:20px;
+    margin-left:10px;
+}
+
+details input {
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-left:10px;
+}
+
+details label {
+    font-size: inherit;
+    font-weight: lighter;
+}
+
+label {
+    font-size:18px;
+    font-weight: bold;
+}
+
+.griding {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin:30px;
+}
+
+input,
+textarea,
+select,
+button {
+    border: 1px solid #000;
+    padding: 3px;
+}
